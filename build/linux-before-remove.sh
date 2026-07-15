@@ -2,9 +2,9 @@
 
 case "$1" in
     remove | 0)
-        systemctl disable sing-box-daemon.service || true
+        systemctl disable sing-box-daemon-reF1nd.service || true
         if [ -d /run/systemd/system ]; then
-            systemctl stop sing-box-daemon.service || true
+            systemctl stop sing-box-daemon-reF1nd.service || true
         fi
         ;;
 esac
