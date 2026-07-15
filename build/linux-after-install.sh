@@ -36,14 +36,14 @@ if apparmor_status --enabled > /dev/null 2>&1; then
   fi
 fi
 
-systemctl preset sing-box-daemon.service
+systemctl preset sing-box-daemon-reF1nd.service
 
 if [ -d /run/systemd/system ]; then
     systemctl daemon-reload
     if systemctl cat polkit-agent-helper.socket >/dev/null 2>&1; then
         systemctl start polkit-agent-helper.socket
     fi
-    systemctl restart sing-box-daemon.service
+    systemctl restart sing-box-daemon-reF1nd.service
 else
     echo "systemd is not running, skipping the sing-box service startup"
 fi
